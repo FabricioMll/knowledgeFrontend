@@ -99,6 +99,7 @@ export default {
                 .catch(showError)
         },
         remove() {
+            const method = this.user.id ? 'put' : 'post'
             const id = this.user.id
             axios[method](`${baseApiUrl}/users${id}`)
                 .then(() => {

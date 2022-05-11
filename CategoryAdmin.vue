@@ -84,11 +84,8 @@ export default {
                 .then(() => {
                     this.$toasted.global.defaultSuccess()
                     this.reset()
-                    
                 })
                 .catch(showError)
-                console.log('showError')
-
         },
         loadCategory(category, mode = 'save') {
             this.mode = mode
